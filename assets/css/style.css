@@ -465,3 +465,40 @@ h1.massive-title {
     font-size: 0.9rem;
     color: var(--muted);
 }
+
+/* ========================================= */
+/* --- 3. EFEK SMOOTH PAGE FADE-IN --- */
+/* ========================================= */
+
+/* Kita terapkan efek muncul ini ke navigasi dan isi konten utama */
+body > nav, body > main {
+    animation: munculElegan 1.2s ease-out forwards;
+    opacity: 0; /* Mulai dari transparan */
+}
+
+/* Animasi dari bawah ke atas sambil memudar perlahan */
+@keyframes munculElegan {
+    0% { 
+        opacity: 0; 
+        transform: translateY(15px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+
+/* ========================================= */
+/* --- 4. CUSTOM CURSOR EMOJI --- */
+/* ========================================= */
+
+/* Mengubah kursor panah bawaan menjadi emoji pita 🎀 */
+body {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' style='font-size:24px;'><text y='22'>🎀</text></svg>"), auto;
+}
+
+/* Saat diarahkan ke link atau tombol, kursor berubah jadi bunga 🌸 */
+a, .btn, button, input, textarea {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' style='font-size:24px;'><text y='22'>🌸</text></svg>"), pointer;
+}
