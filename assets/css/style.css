@@ -146,11 +146,45 @@ body {
     gap: 20px;
 }
 
+/* ========================================= */
+/* --- EFEK GALERI PINTEREST (GRAYSCALE) --- */
+/* ========================================= */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Bingkai fotonya kita rapikan dulu */
+.gallery-item {
+    overflow: hidden; /* Ini rahasianya biar pas foto nge-zoom, dia nggak keluar dari kotak */
+    border-radius: 12px; /* Bikin sudut fotonya membulat halus */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Kasih bayangan tipis biar kelihatan elegan */
+}
+
+/* Kondisi awal foto: Abu-abu dan diam */
 .gallery-item img {
     width: 100%;
-    height: auto;
-    border-radius: 4px;
-    transition: opacity 0.4s ease;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); /* Membuat foto jadi hitam-putih estetik */
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Rumus transisi super smooth */
+    display: block;
+}
+
+/* Kondisi saat foto disentuh mouse (hover): Berwarna dan membesar! */
+.gallery-item img:hover {
+    filter: grayscale(0%); /* Warna asli fotonya kembali menyala */
+    transform: scale(1.08); /* Efek nge-zoom sedikit ke depan */
+    opacity: 1; 
+}
+
+/* Khusus tampilan HP: Fotonya langsung berwarna aja biar nggak repot ngetap */
+@media (max-width: 768px) {
+    .gallery-item img {
+        filter: grayscale(0%);
+    }
 }
 
 .gallery-item img:hover { opacity: 0.8; }
