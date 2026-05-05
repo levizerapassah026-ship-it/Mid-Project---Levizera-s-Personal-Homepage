@@ -57,8 +57,16 @@ body {
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover {
     color: var(--text);
+}
+
+/* Ini desain khusus untuk menu yang sedang aktif */
+.nav-links a.active {
+    color: var(--text);
+    font-weight: 700; /* Bikin tulisannya jadi tebal */
+    border-bottom: 2px solid var(--accent-dark); /* Kasih garis bawah estetik */
+    padding-bottom: 5px; /* Jarak antara teks dan garis bawah */
 }
 
 /* TYPOGRAPHY */
