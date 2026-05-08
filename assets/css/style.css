@@ -343,10 +343,109 @@ h1.massive-title {
     transform: translateY(0);
 }
 
-/* Responsive buat HP */
+/* ===== RESPONSIVE MOBILE ===== */
 @media (max-width: 768px) {
-    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-    h1.massive-title { line-height: 1; }
+
+    .contact-layout {
+        display: block !important;
+        min-height: unset;
+    }
+
+    .contact-left {
+        display: block;
+        width: 100%;
+        padding: 32px 24px;
+        padding-right: 24px !important;
+    }
+
+    .bio-book-wrap {
+        display: block;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        top: unset !important;
+        right: unset !important;
+        margin: 0;
+    }
+
+    .book-frame {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: unset;
+        border-left: none;
+        border-top: 4px solid #d45f7f;
+        border-radius: 0;
+        box-shadow: inset 0 8px 20px rgba(212, 95, 127, 0.08);
+    }
+
+    .book-spine {
+        display: none !important;
+    }
+
+    .book-header {
+        padding: 20px 20px 14px 20px;
+    }
+
+    .book-content {
+        padding: 20px;
+        overflow-y: visible !important;
+        height: auto !important;
+        max-height: unset !important;
+    }
+
+    .book-footer {
+        padding: 12px 20px;
+    }
+
+    .bio-avatar {
+        width: 72px;
+        height: 72px;
+        font-size: 28px;
+    }
+
+    .bio-name {
+        font-size: 17px;
+    }
+
+    .bio-row {
+        flex-direction: row;
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .bio-row--column {
+        flex-direction: column;
+    }
+
+    .bio-label {
+        min-width: 56px;
+        flex-shrink: 0;
+    }
+
+    .bio-tag {
+        font-size: 11px;
+        padding: 4px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .contact-left {
+        padding: 24px 18px !important;
+    }
+
+    .book-content {
+        padding: 16px 18px !important;
+    }
+
+    .bio-name {
+        font-size: 16px;
+    }
+
+    .bio-value {
+        font-size: 13px;
+    }
 }
 
 /* --- ARTICLE READING PAGE --- */
