@@ -532,177 +532,184 @@ a, .btn, button, input, textarea {
 
 /* ===== CONTACT LAYOUT ===== */
 .contact-layout {
-  display: flex;
-  align-items: flex-start;
-  gap: 60px;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    position: relative;
+    min-height: 100vh;
 }
 
-.contact-text {
-  flex: 1;
+.contact-left {
+    flex: 1;
+    padding-right: 320px; /* beri ruang untuk buku di kanan */
 }
 
-/* ===== BOOK BIODATA ===== */
+/* ===== BOOK BIODATA - FIXED KE KANAN ===== */
 .bio-book-wrap {
-  flex-shrink: 0;
-  width: 260px;
-  padding-top: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    z-index: 100;
 }
 
 .book-frame {
-  position: relative;
-  width: 260px;
-  height: 400px;
-  background: #fff0f3;
-  border-radius: 4px 18px 18px 4px;
-  border: 2px solid #e8a0b0;
-  box-shadow:
-    -8px 0 0 #d45f7f,
-    -12px 0 0 #b84060,
-    inset 10px 0 14px rgba(212, 95, 127, 0.10);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff0f3;
+    border-radius: 0;
+    border: none;
+    border-left: 3px solid #e8a0b0;
+    box-shadow:
+        -6px 0 16px rgba(212, 95, 127, 0.15),
+        inset 10px 0 20px rgba(212, 95, 127, 0.07);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .book-spine {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 9px;
-  background: linear-gradient(to right, #b84060, #e8a0b0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(to right, #b84060, #e8a0b0);
 }
 
 .book-header {
-  padding: 14px 16px 10px 22px;
-  border-bottom: 1px solid #f0c0cc;
-  background: #ffe0e8;
-  flex-shrink: 0;
+    padding: 28px 20px 16px 24px;
+    border-bottom: 1px solid #f0c0cc;
+    background: #ffe0e8;
+    flex-shrink: 0;
 }
 
 .book-title {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: #c0405a;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c0405a;
 }
 
 .book-content {
-  padding: 14px 14px 14px 22px;
-  overflow-y: auto;
-  flex: 1;
-  scrollbar-width: thin;
-  scrollbar-color: #e8a0b0 #fff0f3;
+    padding: 24px 20px 20px 24px;
+    overflow-y: auto;
+    flex: 1;
+    scrollbar-width: thin;
+    scrollbar-color: #e8a0b0 #fff0f3;
 }
 
 .book-content::-webkit-scrollbar {
-  width: 4px;
+    width: 4px;
 }
 
 .book-content::-webkit-scrollbar-track {
-  background: #fff0f3;
+    background: #fff0f3;
 }
 
 .book-content::-webkit-scrollbar-thumb {
-  background: #e8a0b0;
-  border-radius: 4px;
+    background: #e8a0b0;
+    border-radius: 4px;
 }
 
 .book-footer {
-  padding: 7px 16px 9px 22px;
-  border-top: 1px solid #f0c0cc;
-  background: #ffe0e8;
-  font-size: 10px;
-  color: #d480a0;
-  text-align: center;
-  letter-spacing: 1px;
-  flex-shrink: 0;
+    padding: 12px 20px 16px 24px;
+    border-top: 1px solid #f0c0cc;
+    background: #ffe0e8;
+    font-size: 10px;
+    color: #d480a0;
+    text-align: center;
+    letter-spacing: 1px;
+    flex-shrink: 0;
 }
 
-/* ===== BIO CONTENT ===== */
+/* ===== BIO CONTENT (lebih besar) ===== */
 .bio-avatar {
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  background: #f9c0cc;
-  border: 3px solid #e8a0b0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: 700;
-  color: #b84060;
-  margin: 0 auto 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #f9c0cc;
+    border: 3px solid #e8a0b0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #b84060;
+    margin: 0 auto 14px;
 }
 
 .bio-name {
-  text-align: center;
-  font-size: 15px;
-  font-weight: 700;
-  color: #2d2d2d;
-  margin-bottom: 2px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2d2d2d;
+    margin-bottom: 4px;
 }
 
 .bio-tagline {
-  text-align: center;
-  font-size: 10px;
-  color: #c0405a;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 12px;
+    text-align: center;
+    font-size: 11px;
+    color: #c0405a;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
 }
 
 .bio-divider {
-  border: none;
-  border-top: 1px dashed #f0c0cc;
-  margin: 9px 0;
+    border: none;
+    border-top: 1px dashed #f0c0cc;
+    margin: 12px 0;
 }
 
 .bio-row {
-  display: flex;
-  gap: 8px;
-  align-items: flex-start;
-  margin-bottom: 9px;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 12px;
 }
 
 .bio-row--column {
-  flex-direction: column;
-  gap: 6px;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .bio-label {
-  font-weight: 700;
-  color: #c0405a;
-  min-width: 60px;
-  flex-shrink: 0;
-  font-size: 10px;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
+    font-weight: 700;
+    color: #c0405a;
+    min-width: 56px;
+    flex-shrink: 0;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-top: 1px;
 }
 
 .bio-value {
-  color: #444;
-  line-height: 1.5;
-  font-size: 12px;
+    color: #444;
+    line-height: 1.6;
+    font-size: 13px;
 }
 
 .bio-value--quote {
-  font-style: italic;
-  color: #c0405a;
+    font-style: italic;
+    color: #c0405a;
 }
 
 .bio-hobbies {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 .bio-tag {
-  background: #ffe0e8;
-  color: #c0405a;
-  font-size: 10px;
-  padding: 2px 9px;
-  border-radius: 20px;
-  border: 1px solid #f0c0cc;
+    background: #ffe0e8;
+    color: #c0405a;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid #f0c0cc;
 }
