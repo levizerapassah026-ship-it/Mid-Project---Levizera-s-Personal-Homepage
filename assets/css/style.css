@@ -529,3 +529,180 @@ body {
 a, .btn, button, input, textarea {
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' style='font-size:24px;'><text y='22'>🌸</text></svg>"), pointer;
 }
+
+/* ===== CONTACT LAYOUT ===== */
+.contact-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.contact-text {
+  flex: 1;
+}
+
+/* ===== BOOK BIODATA ===== */
+.bio-book-wrap {
+  flex-shrink: 0;
+  width: 260px;
+  padding-top: 10px;
+}
+
+.book-frame {
+  position: relative;
+  width: 260px;
+  height: 400px;
+  background: #fff0f3;
+  border-radius: 4px 18px 18px 4px;
+  border: 2px solid #e8a0b0;
+  box-shadow:
+    -8px 0 0 #d45f7f,
+    -12px 0 0 #b84060,
+    inset 10px 0 14px rgba(212, 95, 127, 0.10);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 9px;
+  background: linear-gradient(to right, #b84060, #e8a0b0);
+}
+
+.book-header {
+  padding: 14px 16px 10px 22px;
+  border-bottom: 1px solid #f0c0cc;
+  background: #ffe0e8;
+  flex-shrink: 0;
+}
+
+.book-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #c0405a;
+}
+
+.book-content {
+  padding: 14px 14px 14px 22px;
+  overflow-y: auto;
+  flex: 1;
+  scrollbar-width: thin;
+  scrollbar-color: #e8a0b0 #fff0f3;
+}
+
+.book-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.book-content::-webkit-scrollbar-track {
+  background: #fff0f3;
+}
+
+.book-content::-webkit-scrollbar-thumb {
+  background: #e8a0b0;
+  border-radius: 4px;
+}
+
+.book-footer {
+  padding: 7px 16px 9px 22px;
+  border-top: 1px solid #f0c0cc;
+  background: #ffe0e8;
+  font-size: 10px;
+  color: #d480a0;
+  text-align: center;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+/* ===== BIO CONTENT ===== */
+.bio-avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #f9c0cc;
+  border: 3px solid #e8a0b0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #b84060;
+  margin: 0 auto 10px;
+}
+
+.bio-name {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 2px;
+}
+
+.bio-tagline {
+  text-align: center;
+  font-size: 10px;
+  color: #c0405a;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.bio-divider {
+  border: none;
+  border-top: 1px dashed #f0c0cc;
+  margin: 9px 0;
+}
+
+.bio-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 9px;
+}
+
+.bio-row--column {
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bio-label {
+  font-weight: 700;
+  color: #c0405a;
+  min-width: 60px;
+  flex-shrink: 0;
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.bio-value {
+  color: #444;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.bio-value--quote {
+  font-style: italic;
+  color: #c0405a;
+}
+
+.bio-hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.bio-tag {
+  background: #ffe0e8;
+  color: #c0405a;
+  font-size: 10px;
+  padding: 2px 9px;
+  border-radius: 20px;
+  border: 1px solid #f0c0cc;
+}
