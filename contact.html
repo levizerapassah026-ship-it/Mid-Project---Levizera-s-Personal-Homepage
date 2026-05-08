@@ -9,7 +9,7 @@
 <body>
     <nav class="navbar">
         <div class="logo">L's</div>
-    <ul class="nav-links">
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="blog.html">Blog</a></li>
@@ -18,32 +18,98 @@
         </ul>
     </nav>
 
-   <main class="container">
+    <main class="container">
         <h1 class="massive-title">Let's Connect.</h1>
-        
-     <!-- BAGIAN KONTAK LANGSUNG (Di atas) -->
-        <div class="direct-contact">
-           
-            
-            <a href="mailto:lvypssah@gmail.com" class="big-email">lvypssah@gmail.com</a>
-            
-            <div class="social-links">
-                <a href="https://www.instagram.com/levizera._" target="_blank">Instagram</a>
-            </div>
-        </div>
 
-        <!-- BAGIAN FORM (Di bawah) -->
-        <div class="contact-section">
-            <p class="form-title">Atau kirim pesan cepat di sini:</p>
-            <form id="contactForm">
-                <input type="text" id="name" placeholder="Nama Kamu" required>
-                <input type="email" id="email" placeholder="Alamat Email" required>
-                <textarea id="message" placeholder="Tulis pesanmu di sini..." rows="4" required></textarea>
-                <button type="submit" class="btn">Kirim Pesan</button>
-            </form>
-            <div id="status"></div>
+        <div class="contact-layout">
+
+            <!-- KOLOM KIRI -->
+            <div class="contact-left">
+
+                <!-- BAGIAN KONTAK LANGSUNG -->
+                <div class="direct-contact">
+                    <a href="mailto:lvypssah@gmail.com" class="big-email">lvypssah@gmail.com</a>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/levizera._" target="_blank">Instagram</a>
+                    </div>
+                </div>
+
+                <!-- BAGIAN FORM -->
+                <div class="contact-section">
+                    <p class="form-title">Atau kirim pesan cepat di sini:</p>
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Nama Kamu" required>
+                        <input type="email" id="email" placeholder="Alamat Email" required>
+                        <textarea id="message" placeholder="Tulis pesanmu di sini..." rows="4" required></textarea>
+                        <button type="submit" class="btn">Kirim Pesan</button>
+                    </form>
+                    <div id="status"></div>
+                </div>
+
+            </div>
+
+            <!-- KOLOM KANAN: FRAME BUKU BIODATA -->
+            <div class="bio-book-wrap">
+                <div class="book-frame">
+                    <div class="book-spine"></div>
+
+                    <div class="book-header">
+                        <div class="book-title">✦ About Me</div>
+                    </div>
+
+                    <div class="book-content">
+                        <div class="bio-avatar">L</div>
+                        <div class="bio-name">Levizera Passah</div>
+                        <div class="bio-tagline">✦ Creative Soul ✦</div>
+                        <hr class="bio-divider">
+
+                        <div class="bio-row">
+                            <span class="bio-label">Name</span>
+                            <span class="bio-value">Levizera Passah</span>
+                        </div>
+                        <div class="bio-row">
+                            <span class="bio-label">Born</span>
+                            <span class="bio-value">Jakarta, Indonesia</span>
+                        </div>
+                        <div class="bio-row">
+                            <span class="bio-label">Study</span>
+                            <span class="bio-value">Desain Komunikasi Visual</span>
+                        </div>
+                        <div class="bio-row">
+                            <span class="bio-label">Vibe</span>
+                            <span class="bio-value">Aesthetic ✦ Cozy ✦ Creative</span>
+                        </div>
+                        <hr class="bio-divider">
+
+                        <div class="bio-row">
+                            <span class="bio-label">Bio</span>
+                            <span class="bio-value">Haii! Aku Levi, suka banget sama hal-hal visual, dari desain grafis, fotografi, sampai nulis blog tentang daily life aku.</span>
+                        </div>
+                        <hr class="bio-divider">
+
+                        <div class="bio-row bio-row--column">
+                            <span class="bio-label">Hobbies</span>
+                            <div class="bio-hobbies">
+                                <span class="bio-tag">📸 Photography</span>
+                                <span class="bio-tag">🎨 Design</span>
+                                <span class="bio-tag">📖 Reading</span>
+                                <span class="bio-tag">✍️ Journaling</span>
+                                <span class="bio-tag">🎵 Music</span>
+                            </div>
+                        </div>
+                        <hr class="bio-divider">
+
+                        <div class="bio-row">
+                            <span class="bio-label">Quote</span>
+                            <span class="bio-value bio-value--quote">"Create things that make people feel something."</span>
+                        </div>
+                    </div>
+
+                    <div class="book-footer" id="bookFooter">~ scroll to read more ~</div>
+                </div>
+            </div>
+
         </div>
-    </main>
     </main>
 
     <script src="assets/js/script.js"></script>
