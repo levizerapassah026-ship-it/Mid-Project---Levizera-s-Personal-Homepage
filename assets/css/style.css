@@ -15,14 +15,13 @@ body {
     color: var(--text);
     line-height: 1.4;
     overflow-x: hidden;
-    /* --- INI KODE EFEK PINK BERGERAKNYA --- */
     background: linear-gradient(135deg, #ffffff 0%, #ffe4e8 30%, #ffd1dc 70%, #ffffff 100%);
     background-size: 200% 200%;
     background-attachment: fixed;
     animation: gerakPink 15s ease infinite;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' style='font-size:24px;'><text y='22'>🎀</text></svg>"), auto;
 }
 
-/* Animasi untuk menggerakkan gradasi pink */
 @keyframes gerakPink {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -57,16 +56,13 @@ body {
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: var(--text);
-}
+.nav-links a:hover { color: var(--text); }
 
-/* Ini desain khusus untuk menu yang sedang aktif */
 .nav-links a.active {
     color: var(--text);
-    font-weight: 700; /* Bikin tulisannya jadi tebal */
-    border-bottom: 2px solid var(--accent-dark); /* Kasih garis bawah estetik */
-    padding-bottom: 5px; /* Jarak antara teks dan garis bawah */
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-dark);
+    padding-bottom: 5px;
 }
 
 /* TYPOGRAPHY */
@@ -139,48 +135,33 @@ body {
     font-size: 0.9rem;
 }
 
-
-/* ========================================= */
-/* --- EFEK GALERI PINTEREST (GRAYSCALE) --- */
-/* ========================================= */
-
+/* GALLERY */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-/* Bingkai fotonya kita rapikan dulu */
 .gallery-item {
-    overflow: hidden; /* Ini rahasianya biar pas foto nge-zoom, dia nggak keluar dari kotak */
-    border-radius: 12px; /* Bikin sudut fotonya membulat halus */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Kasih bayangan tipis biar kelihatan elegan */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* Kondisi awal foto: Abu-abu dan diam */
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(100%); /* Membuat foto jadi hitam-putih estetik */
-    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Rumus transisi super smooth */
+    filter: grayscale(100%);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: block;
 }
 
-/* Kondisi saat foto disentuh mouse (hover): Berwarna dan membesar! */
 .gallery-item img:hover {
-    filter: grayscale(0%); /* Warna asli fotonya kembali menyala */
-    transform: scale(1.08); /* Efek nge-zoom sedikit ke depan */
-    opacity: 1; 
+    filter: grayscale(0%);
+    transform: scale(1.08);
+    opacity: 1;
 }
-
-/* Khusus tampilan HP: Fotonya langsung berwarna aja biar nggak repot ngetap */
-@media (max-width: 768px) {
-    .gallery-item img {
-        filter: grayscale(0%);
-    }
-}
-
 
 /* FORM */
 .contact-section { max-width: 700px; }
@@ -201,38 +182,30 @@ input:focus, textarea:focus { border-bottom-color: var(--accent); }
 
 #status { margin-top: 1rem; font-weight: 600; color: var(--accent-dark); }
 
-@media (max-width: 768px) {
-    .navbar { flex-direction: column; gap: 2rem; padding: 2rem 8%; }
-    .massive-title { letter-spacing: -2px; }
-    .gallery-grid { grid-template-columns: 1fr; }
-}
-
-/* --- INTERACTIVE BACKGROUND EFFECT --- */
+/* INTERACTIVE BACKGROUND */
 .bg-animation {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1; 
+    z-index: -1;
     overflow: hidden;
-    background-color: transparent; /* Diganti transparan agar gradasi pink di body terlihat */
+    background-color: transparent;
 }
 
-/* Bentuk dasar cahayanya */
 .blob {
     position: absolute;
-    filter: blur(90px); 
+    filter: blur(90px);
     opacity: 0.7;
     border-radius: 50%;
-    transition: transform 0.1s ease-out; 
+    transition: transform 0.1s ease-out;
 }
 
-/* Pengaturan warna dan posisi awal masing-masing cahaya */
 .blob-1 {
     width: 450px;
     height: 450px;
-    background: #EBB2C3; 
+    background: #EBB2C3;
     top: -10%;
     left: -10%;
 }
@@ -240,7 +213,7 @@ input:focus, textarea:focus { border-bottom-color: var(--accent); }
 .blob-2 {
     width: 550px;
     height: 550px;
-    background: #EAE0E2; 
+    background: #EAE0E2;
     top: 40%;
     right: -15%;
 }
@@ -248,14 +221,14 @@ input:focus, textarea:focus { border-bottom-color: var(--accent); }
 .blob-3 {
     width: 400px;
     height: 400px;
-    background: #D48EA2; 
+    background: #D48EA2;
     bottom: -20%;
     left: 15%;
 }
 
-/* --- UPDATE HERO SECTION --- */
+/* HERO SECTION */
 .hero {
-    min-height: 85vh; 
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -267,7 +240,7 @@ input:focus, textarea:focus { border-bottom-color: var(--accent); }
     font-size: 2rem;
     letter-spacing: 15px;
     margin-bottom: 1rem;
-    animation: float 3s ease-in-out infinite; 
+    animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
@@ -281,23 +254,21 @@ h1.massive-title {
     line-height: 0.85;
     font-weight: 700;
     letter-spacing: -3px;
-    margin-bottom: 2rem; 
+    margin-bottom: 2rem;
     text-transform: uppercase;
 }
 
 .calligraphy-text {
     font-family: 'Great Vibes', cursive;
-    font-size: clamp(3.5rem, 6vw, 6rem); 
+    font-size: clamp(3.5rem, 6vw, 6rem);
     color: var(--accent-dark);
-    margin-top: 2rem; 
-    letter-spacing: 5px; 
-    transform: rotate(-5deg) scaleX(1.2); 
+    margin-top: 2rem;
+    letter-spacing: 5px;
+    transform: rotate(-5deg) scaleX(1.2);
 }
 
-/* --- ABOUT SECTION (SCROLL) --- */
-.about-section {
-    padding: 10rem 0;
-}
+/* ABOUT SECTION */
+.about-section { padding: 10rem 0; }
 
 .about-grid {
     display: grid;
@@ -327,11 +298,8 @@ h1.massive-title {
     transition: transform 0.5s ease;
 }
 
-.about-image img:hover {
-    transform: translateY(-15px);
-}
+.about-image img:hover { transform: translateY(-15px); }
 
-/* Animasi Muncul Saat Scroll */
 .fade-in-on-scroll {
     opacity: 0;
     transform: translateY(50px);
@@ -343,131 +311,22 @@ h1.massive-title {
     transform: translateY(0);
 }
 
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 768px) {
-
-    .contact-layout {
-        display: block !important;
-        min-height: unset;
-    }
-
-    .contact-left {
-        display: block;
-        width: 100%;
-        padding: 32px 24px;
-        padding-right: 24px !important;
-    }
-
-    .bio-book-wrap {
-        display: block;
-        position: static !important;
-        width: 100% !important;
-        height: auto !important;
-        top: unset !important;
-        right: unset !important;
-        margin: 0;
-    }
-
-    .book-frame {
-        position: static !important;
-        width: 100% !important;
-        height: auto !important;
-        min-height: unset;
-        border-left: none;
-        border-top: 4px solid #d45f7f;
-        border-radius: 0;
-        box-shadow: inset 0 8px 20px rgba(212, 95, 127, 0.08);
-    }
-
-    .book-spine {
-        display: none !important;
-    }
-
-    .book-header {
-        padding: 20px 20px 14px 20px;
-    }
-
-    .book-content {
-        padding: 20px;
-        overflow-y: visible !important;
-        height: auto !important;
-        max-height: unset !important;
-    }
-
-    .book-footer {
-        padding: 12px 20px;
-    }
-
-    .bio-avatar {
-        width: 72px;
-        height: 72px;
-        font-size: 28px;
-    }
-
-    .bio-name {
-        font-size: 17px;
-    }
-
-    .bio-row {
-        flex-direction: row;
-        gap: 10px;
-        margin-bottom: 12px;
-    }
-
-    .bio-row--column {
-        flex-direction: column;
-    }
-
-    .bio-label {
-        min-width: 56px;
-        flex-shrink: 0;
-    }
-
-    .bio-tag {
-        font-size: 11px;
-        padding: 4px 12px;
-    }
-}
-
-@media (max-width: 480px) {
-
-    .contact-left {
-        padding: 24px 18px !important;
-    }
-
-    .book-content {
-        padding: 16px 18px !important;
-    }
-
-    .bio-name {
-        font-size: 16px;
-    }
-
-    .bio-value {
-        font-size: 13px;
-    }
-}
-
-/* --- ARTICLE READING PAGE --- */
-.article-header {
-    margin-bottom: 4rem;
-}
+/* ARTICLE PAGE */
+.article-header { margin-bottom: 4rem; }
 
 .article-header .massive-title {
-    font-size: clamp(2.5rem, 6vw, 5rem); 
+    font-size: clamp(2.5rem, 6vw, 5rem);
     letter-spacing: -2px;
 }
 
 .article-content {
-    max-width: 800px; 
+    max-width: 800px;
     font-size: 1.15rem;
     line-height: 1.8;
     color: var(--text);
 }
 
-.article-content p {
-    margin-bottom: 2rem;
-}
+.article-content p { margin-bottom: 2rem; }
 
 .article-content img {
     width: 100%;
@@ -482,15 +341,11 @@ h1.massive-title {
     font-weight: 600;
     color: var(--accent-dark);
     text-decoration: none;
-    transition: var(--transition);
 }
 
-.back-link:hover {
-    color: var(--text);
-    transform: translateX(-5px);
-}
+.back-link:hover { color: var(--text); }
 
-/* --- DIRECT CONTACT SECTION --- */
+/* DIRECT CONTACT */
 .direct-contact {
     margin-bottom: 5rem;
     border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -499,12 +354,12 @@ h1.massive-title {
 
 .big-email {
     display: inline-block;
-    font-size: clamp(2rem, 5vw, 4rem); 
+    font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 300;
     color: var(--text);
     text-decoration: none;
     margin: 1rem 0 3rem 0;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .big-email:hover {
@@ -524,7 +379,7 @@ h1.massive-title {
     color: var(--muted);
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: var(--transition);
+    transition: all 0.3s ease;
 }
 
 .social-links a:hover {
@@ -539,7 +394,7 @@ h1.massive-title {
     color: var(--text);
 }
 
-/* --- VIBES & FAVORITES PAGE --- */
+/* VIBES PAGE */
 .vibes-section {
     margin-top: 3rem;
     margin-bottom: 5rem;
@@ -592,39 +447,18 @@ h1.massive-title {
     color: var(--muted);
 }
 
-/* ========================================= */
-/* --- 3. EFEK SMOOTH PAGE FADE-IN --- */
-/* ========================================= */
-
-/* Kita terapkan efek muncul ini ke navigasi dan isi konten utama */
+/* PAGE FADE IN */
 body > nav, body > main {
     animation: munculElegan 1.2s ease-out forwards;
-    opacity: 0; /* Mulai dari transparan */
+    opacity: 0;
 }
 
-/* Animasi dari bawah ke atas sambil memudar perlahan */
 @keyframes munculElegan {
-    0% { 
-        opacity: 0; 
-        transform: translateY(15px); 
-    }
-    100% { 
-        opacity: 1; 
-        transform: translateY(0); 
-    }
+    0% { opacity: 0; transform: translateY(15px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
-
-/* ========================================= */
-/* --- 4. CUSTOM CURSOR EMOJI --- */
-/* ========================================= */
-
-/* Mengubah kursor panah bawaan menjadi emoji pita 🎀 */
-body {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' style='font-size:24px;'><text y='22'>🎀</text></svg>"), auto;
-}
-
-/* Saat diarahkan ke link atau tombol, kursor berubah jadi bunga 🌸 */
+/* CURSOR */
 a, .btn, button, input, textarea {
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26' style='font-size:24px;'><text y='22'>🌸</text></svg>"), pointer;
 }
@@ -632,18 +466,17 @@ a, .btn, button, input, textarea {
 /* ===== CONTACT LAYOUT ===== */
 .contact-layout {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
+    min-height: calc(100vh - 120px);
     gap: 0;
-    position: relative;
-    min-height: 100vh;
 }
 
 .contact-left {
     flex: 1;
-    padding-right: 320px; /* beri ruang untuk buku di kanan */
+    padding-right: 320px;
 }
 
-/* ===== BOOK BIODATA - FIXED KE KANAN ===== */
+/* ===== BOOK BIODATA ===== */
 .bio-book-wrap {
     position: fixed;
     top: 0;
@@ -658,8 +491,6 @@ a, .btn, button, input, textarea {
     width: 100%;
     height: 100%;
     background: #fff0f3;
-    border-radius: 0;
-    border: none;
     border-left: 3px solid #e8a0b0;
     box-shadow:
         -6px 0 16px rgba(212, 95, 127, 0.15),
@@ -686,7 +517,7 @@ a, .btn, button, input, textarea {
 }
 
 .book-title {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -701,18 +532,9 @@ a, .btn, button, input, textarea {
     scrollbar-color: #e8a0b0 #fff0f3;
 }
 
-.book-content::-webkit-scrollbar {
-    width: 4px;
-}
-
-.book-content::-webkit-scrollbar-track {
-    background: #fff0f3;
-}
-
-.book-content::-webkit-scrollbar-thumb {
-    background: #e8a0b0;
-    border-radius: 4px;
-}
+.book-content::-webkit-scrollbar { width: 4px; }
+.book-content::-webkit-scrollbar-track { background: #fff0f3; }
+.book-content::-webkit-scrollbar-thumb { background: #e8a0b0; border-radius: 4px; }
 
 .book-footer {
     padding: 12px 20px 16px 24px;
@@ -725,10 +547,10 @@ a, .btn, button, input, textarea {
     flex-shrink: 0;
 }
 
-/* ===== BIO CONTENT (lebih besar) ===== */
+/* ===== BIO CONTENT ===== */
 .bio-avatar {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     background: #f9c0cc;
     border: 3px solid #e8a0b0;
@@ -739,6 +561,16 @@ a, .btn, button, input, textarea {
     font-weight: 700;
     color: #b84060;
     margin: 0 auto 14px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.bio-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
 }
 
 .bio-name {
@@ -816,91 +648,76 @@ a, .btn, button, input, textarea {
 /* ===== RESPONSIVE MOBILE ===== */
 @media (max-width: 768px) {
 
+    .navbar { flex-direction: column; gap: 2rem; padding: 2rem 8%; }
+    .massive-title { letter-spacing: -2px; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item img { filter: grayscale(0%); }
+
     .contact-layout {
-        flex-direction: column;
+        display: block !important;
         min-height: unset;
     }
 
     .contact-left {
-        padding: 32px 24px;
+        display: block;
         width: 100%;
+        padding: 32px 24px !important;
     }
 
     .bio-book-wrap {
-        position: static;
-        width: 100%;
-        height: auto;
-        margin: 0;
+        position: static !important;
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+        top: unset !important;
+        right: unset !important;
     }
 
     .book-frame {
-        width: 100%;
-        height: auto;
-        min-height: unset;
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
         border-left: none;
         border-top: 4px solid #d45f7f;
-        box-shadow: inset 0 12px 24px rgba(212, 95, 127, 0.08);
+        box-shadow: inset 0 8px 20px rgba(212, 95, 127, 0.08);
     }
 
-    .book-spine {
-        display: none;
-    }
+    .book-spine { display: none !important; }
 
-    .book-header {
-        padding: 20px 20px 14px 20px;
-    }
+    .book-header { padding: 20px 20px 14px 20px; }
 
     .book-content {
         padding: 20px;
-        overflow-y: visible;
-        height: auto;
+        overflow-y: visible !important;
+        height: auto !important;
+        max-height: unset !important;
     }
 
-    .book-footer {
-        padding: 12px 20px;
-    }
+    .book-footer { padding: 12px 20px; }
 
     .bio-avatar {
-        width: 72px;
-        height: 72px;
+        width: 80px;
+        height: 80px;
         font-size: 28px;
     }
 
-    .bio-name {
-        font-size: 17px;
-    }
+    .bio-name { font-size: 17px; }
 
     .bio-row {
-        flex-direction: column;
-        gap: 4px;
+        flex-direction: row;
+        gap: 10px;
         margin-bottom: 12px;
     }
 
-    .bio-label {
-        min-width: unset;
-    }
-
-    .bio-tag {
-        font-size: 11px;
-        padding: 4px 12px;
-    }
+    .bio-row--column { flex-direction: column; }
+    .bio-label { min-width: 56px; flex-shrink: 0; }
+    .bio-tag { font-size: 11px; padding: 4px 12px; }
 }
 
 @media (max-width: 480px) {
 
-    .contact-left {
-        padding: 24px 18px;
-    }
-
-    .book-content {
-        padding: 16px 18px;
-    }
-
-    .bio-name {
-        font-size: 16px;
-    }
-
-    .bio-value {
-        font-size: 13px;
-    }
+    .contact-left { padding: 24px 18px !important; }
+    .book-content { padding: 16px 18px !important; }
+    .bio-name { font-size: 16px; }
+    .bio-value { font-size: 13px; }
 }
