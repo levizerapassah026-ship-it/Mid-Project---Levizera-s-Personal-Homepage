@@ -73,3 +73,23 @@ document.addEventListener('DOMContentLoaded', () => {
     faders.forEach(fader => {
         appearOnScroll.observe(fader);
     });
+// ===== BOOK BIODATA: scroll indicator =====
+document.addEventListener('DOMContentLoaded', function () {
+  const bookContent = document.querySelector('.book-content');
+  const bookFooter = document.querySelector('.book-footer');
+
+  if (!bookContent || !bookFooter) return;
+
+  bookContent.addEventListener('scroll', function () {
+    const isAtBottom =
+      bookContent.scrollTop + bookContent.clientHeight >= bookContent.scrollHeight - 10;
+
+    if (isAtBottom) {
+      bookFooter.textContent = '~ you reached the end ✦ ~';
+      bookFooter.style.color = '#c0405a';
+    } else {
+      bookFooter.textContent = '~ scroll to read more ~';
+      bookFooter.style.color = '#d480a0';
+    }
+  });
+});
